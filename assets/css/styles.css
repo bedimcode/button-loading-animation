@@ -1,0 +1,66 @@
+/*=============== LOADING BUTTON ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(231, 44%, 56%);
+  --first-color-alt: hsl(231, 44%, 51%);
+  --text-color: hsl(231, 12%, 98%);
+  --body-color: hsl(231, 100%, 94%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: var(--body-color);
+}
+
+.button__loader {
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 1.25rem 2.5rem;
+  background-color: var(--first-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: .5rem;
+  box-shadow: 0 18px 40px hsla(231, 56%, 56%, .3);
+  overflow: hidden;
+  cursor: wait;
+}
+
+.button__loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: repeating-linear-gradient(60deg, 
+              transparent, 
+              transparent 0.75rem, 
+              var(--first-color-alt) 0.75rem, 
+              var(--first-color-alt) 1.5rem);
+  animation: load 1s infinite linear;
+}
+
+.button__text {
+  position: relative;
+}
+
+/* Loading button animation */
+@keyframes load {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1.75rem);
+  }
+}
