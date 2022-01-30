@@ -1,0 +1,18 @@
+/*=============== LOADING BUTTON ===============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(231, 44%, 56%);
+  --first-color-alt: hsl(231, 44%, 51%);
+  --text-color: hsl(231, 12%, 98%);
+  --body-color: hsl(231, 100%, 94%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Loading button animation */
+
